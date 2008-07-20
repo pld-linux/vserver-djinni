@@ -1,9 +1,10 @@
-Summary:	vserver-djinni
+Summary:	vserver-djinni - performing privileged tasks in unprivileged vservers
+Summary(pl.UTF-8):	vserver-djinni - wykonywanie uprzywilejowanych zadań w nieuprzywilejowanych vserverach
 Name:		vserver-djinni
 Version:	0.3
 Release:	0.1
 License:	GPL v2
-Group:		Applications
+Group:		Applications/System
 Source0:	http://enrico-scholz.de/fedora.us-build/files/%{name}-%{version}.tar.bz2
 # Source0-md5:	54ec7b6666deb1a288817c1025a4c6d2
 URL:		http://enrico-scholz.de/fedora.us-build/html/ar01s02.html#sec:components:vserver-djinni
@@ -17,7 +18,16 @@ in unprivileged vservers.
 To do this, a djinnid daemon is running in the privileged host-ctx and
 listens on commands from the vservers. One of djinni's designgoals was
 to enable a vserver-in-vserver functionality which is not doable with
-current vserver patch
+current vserver patch.
+
+%description -l pl.UTF-8
+vserver-djinni służy do wykonywania uprzywilejowanych zadań w
+nieuprzywilejowanych vserverach.
+
+W tym celu w kontekście uprzywilejowanego hosta działa demon djinnid i
+nasłuchuje poleceń od vserverów. Jednym z celów projektu jest
+umożliwienie tworzenia vserverów w vserverach, co nie jest wykonywalne
+z aktualną łatą vserver.
 
 %prep
 %setup -q
